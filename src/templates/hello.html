@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en" class="">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Belajar Dark Tailwind CSS</title>
+    <link
+      rel="icon"
+      href="../images/favicon.png"
+      type="image/gif"
+      sizes="16x16"
+    />
+    <link rel="stylesheet" href="../css/output.css" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body class="bg-[#FAE0EC] p-12 lg:px-[100px] font-poppins">
+    <div class="py-24">
+      <div class="flex justify-center">
+        <h1 class="text-xl font-bold">
+          Halo
+          <span
+            class="text-transparent bg-gradient-to-r from-blue-500 to-teal-400 bg-clip-text"
+            >kamu, iya kamu!!</span
+          >
+        </h1>
+      </div>
+
+      <div class="flex justify-center">
+        <img src="../images/love.gif" alt="" />
+      </div>
+
+      <div class="flex justify-center">
+        <h4 class="text-lg font-medium">Boleh kenalan ?</h4>
+      </div>
+
+      <div class="mt-8 ml-8 space-x-3">
+        <button
+          class="bg-gray-800 text-white py-2.5 px-6 rounded-lg focus:outline-none focus:ring-2 focus:ring-slate-400 focus:ring-offset-2 transition duration-300 outline-none dark:bg-white dark:text-slate-800"
+          id="btn_mau"
+          onclick="alert('wkwk')"
+        >
+          Boleh
+        </button>
+        <button
+          id="btn_gamau"
+          onclick="gamau(this)"
+          style="position: absolute"
+          class="px-6 py-2.5 rounded-lg text-white bg-gradient-to-r from-blue-400 to-blue-500 transition duration-300 focus:ring-2 focus:ring-offset-2 focus:ring-blue-500"
+        >
+          Gaboleh
+        </button>
+      </div>
+    </div>
+
+    <script>
+      function gamau(id) {
+        var mau = document.getElementById("btn_mau");
+        var i = Math.floor(Math.random() * 300) + 1;
+        var j = Math.floor(Math.random() * 100) + mau.offsetTop;
+        id.style.left = i + "px";
+        id.style.top = j + "px";
+      }
+    </script>
+  </body>
+</html>
